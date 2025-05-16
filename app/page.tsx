@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "../components/button";
 import { Card, CardContent } from "../components/card";
 import { Input } from "../components/input";
@@ -7,18 +9,49 @@ export default function AllCareLandingPage() {
     <div className="bg-white text-gray-800">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-100 to-green-50 py-20 px-6 text-center">
-        <h1 className="text-4xl font-bold mb-4">아이부터 어르신까지, 모두를 위한 식자재</h1>
+        <h1 className="text-4xl font-bold mb-4">어린이부터 어르신까지, 모두를 위한 식자재</h1>
         <p className="text-lg mb-6">전국 어린이집·요양원·병원·학교·기업에 믿고 납품하는 올케어</p>
-        <div className="flex justify-center gap-4">
-          <a href="https://onlyonefoodnetfo.ifresh.co.kr/login" target="_blank" rel="noopener noreferrer">
-          <Button variant="outline">CJ프레시웨이</Button>
-          </a>
-          <a href="https://tok.foodmerce.com/toktok/index.jsp" target="_blank" rel="noopener noreferrer">
-          <Button variant="outline">풀무원푸드머스</Button>
-          </a>
-          <a href="https://tos.ourhome.co.kr/NTOS/login.do" target="_blank" rel="noopener noreferrer">
-          <Button variant="outline">아워홈</Button>
-          </a>
+        <div className="flex justify-center gap-8">
+          <div className="flex flex-col items-center gap-2">
+            <a href="https://order.hgreenfood.com/nx-web/" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="/images/hgreenfood-kids.png" 
+                alt="현대그린푸드 Kids" 
+                className="w-40 h-24 object-contain mb-2 cursor-pointer" 
+              />
+            </a>
+            <Button onClick={() => window.open('https://order.hgreenfood.com/nx-web/', '_blank')}>현대그린푸드 - Kids</Button>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <a href="https://order.hgreenfood.com/nx-web/" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="/images/hgreenfood-healthcare.png" 
+                alt="현대그린푸드 Healthcare" 
+                className="w-40 h-24 object-contain mb-2 cursor-pointer" 
+              />
+            </a>
+            <Button onClick={() => window.open('https://order.hgreenfood.com/nx-web/', '_blank')} variant="outline">현대그린푸드 - Healthcare</Button>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <a href="https://onlyonefoodnetfo.ifresh.co.kr/login" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="/images/cj-kids.png" 
+                alt="CJ프레시웨이 Kids" 
+                className="w-40 h-24 object-contain mb-2 cursor-pointer" 
+              />
+            </a>
+            <Button onClick={() => window.open('https://onlyonefoodnetfo.ifresh.co.kr/login', '_blank')}>CJ프레시웨이 - Kids</Button>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <a href="https://onlyonefoodnetfo.ifresh.co.kr/login" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="/images/cj-healthcare.png" 
+                alt="CJ프레시웨이 Healthcare" 
+                className="w-40 h-24 object-contain mb-2 cursor-pointer" 
+              />
+            </a>
+            <Button onClick={() => window.open('https://onlyonefoodnetfo.ifresh.co.kr/login', '_blank')} variant="outline">CJ프레시웨이 - Healthcare</Button>
+          </div>
         </div>
       </section>
 
@@ -71,18 +104,6 @@ export default function AllCareLandingPage() {
           </Card>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-6 bg-green-100 text-center">
-        <h2 className="text-2xl font-bold mb-4">식자재 고민, 올케어가 해결해드립니다</h2>
-        <p className="mb-6">전문 컨설턴트가 직접 상담해드립니다.</p>
-        <div className="max-w-md mx-auto">
-          <Input placeholder="이름 또는 기관명을 입력하세요" className="mb-3" />
-          <Input placeholder="연락처를 입력하세요" className="mb-3" />
-          <Button className="w-full">상담 신청하기</Button>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-10 px-6 text-center">
         <p className="mb-2">© 2025 올케어 AllCare Co., Ltd.</p>
